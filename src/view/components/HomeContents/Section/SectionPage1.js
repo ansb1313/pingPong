@@ -3,8 +3,6 @@ import styled from "styled-components";
 import {mainPage1Image} from "../../../../images/Images";
 
 const SectionPage1 = () => {
-  console.log("mainPage1Image", mainPage1Image);
-
   return (
     <Container className="page1">
       <ImageBox>
@@ -40,7 +38,7 @@ const Container = styled.div`
 `;
 const ImageBox = styled.div`
   position:absolute;
-  bottom: 0;  
+  bottom: 0px;  
   img {
     width: 100%;
     display: block;

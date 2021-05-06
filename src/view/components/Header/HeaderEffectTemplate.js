@@ -9,8 +9,6 @@ const HeaderEffectTemplate = ({children}) => {
     const onClick = () => {
         setActiveStyle(!activeStyle)
     }
-
-    console.log('activeStyle', activeStyle)
     
     return(
         <Container onClick={onClick} className={cn({active:activeStyle})}>  
