@@ -85,6 +85,7 @@ git pull origin 브랜치이름
 
 fork 과정 
 
-- 해당 레포에서 아이콘 클릭 복사 -> 내 로컬로 클론 수정 -> git push -> pull request 요청
+- 해당 레포에서 아이콘 클릭 복사 -> 내 로컬로 클론 수정 -> git push -> pull request 요청(new pull request)
 -> Create pull request
+
 
