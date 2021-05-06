@@ -1,11 +1,17 @@
-import icon from './';
 
-const sideMenuMusic = "https://yt3.ggpht.com/Q3Zd5avmFu7WvZiEgWjjTt09r_Hfxp69EZXoEppkxEtSPdAUt6Q7IH7MpCESnf3wEtxhbUDOLg=s88-c-k-c0x00ffffff-no-rj"
 
-const Images = {
-    icon,
-    sideMenuMusic
-}
+export const sideMenuMusic =
+  "https://yt3.ggpht.com/Q3Zd5avmFu7WvZiEgWjjTt09r_Hfxp69EZXoEppkxEtSPdAUt6Q7IH7MpCESnf3wEtxhbUDOLg=s88-c-k-c0x00ffffff-no-rj";
+export const mainPage1Image =
+  "https://s3-alpha-sig.figma.com/img/3ce4/154c/c6f46d464bc2ec9df44422a46041f844?Expires=1621209600&Signature=BtykQe1FHrxS-0I1jQygqCBheY6vyGbFFQJ32MQ~8iDxrbgvx-3ei~gTBgdkd0xALb3Melk1~tcXJeFR28TuCHvOYiof-JvK8z3c-qPivHuZ0IDqVQxz~Wka5xcEIwsHVRcPzV5AiyFh0e~t-xTnkeOACBTcfZqmwk6jld6zNkR4miEkcq6-QPGTqWWK7JDCTO303Yfw4An20XyyP77CyuV9qqIF3wSI86vqMsO37KeFwV4YjVv8ljfERJejKwxWM-E7RjZrD8PH4pUgaUg~ZQEtHWPaDZkSyQ8UeoHmbABy~i5Qseb04Oi2U~Li6Q~CO6VYo8o1ZwX8JN4xH-i7yA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA";
+export const mainPage2Image ="https://s3-alpha-sig.figma.com/img/42c3/2bdc/767ad3174f6bcdd91899d524a1eef80d?Expires=1621209600&Signature=SWlu7F26iFcbedww6aY-unwIabG2cl3WSWPxoJdrfitLeU11cwLUzbFh9aXuniE-L2eX6~FRNAmAUjKJVAZTQsGKI-rhB8P~hq6U~yTlJdwRu7gaYXhRE43a1-pY7Gaqq40b01GQOnyeGmjv7IXAWpdfBMlBn8x8wjHageZ2CSm8CHyicbTmacR4uJDmYU2A9ffAwxGOI9TH7gj~UZ8fxLvSCY-8Ia9q1sZZYOg~zH174aZgzzbz0Da76DKHKSvgouL~Etr59ZD09BDbxCWPK-t1KXvRwxWid8MnZ3EdjQz~EkilJu3r-3oqR54VIMJwzbOdzHNQYwPUqaL9gsRvkQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"  
+export const mainPage3Image = "https://s3-alpha-sig.figma.com/img/7d0f/0074/bf9e4ac70882ae75146c9f176be3a0e8?Expires=1621209600&Signature=gsaQ2GJ19rg7Bh6lfAu9nMWkrDHuP0sLFqCgMOG8pvrew1-PBgVsvb2l4OyM9-2U~EUlWLdMGPPG19jJckSJg8cg6Egz~HnAaIQDrIKfpnG9xxPo9SJ61o5sZoNXIA~~uDN6ysLHrvMzaH8qZAVnPnmKjbgWgvDT1Klywt7sjfErbxPrZaO2kiF9z4afKenfs03pxaHUQKi2iLlwNspTpSz~qHsjRt-O1DHKpb43haczwhuAL7oTICcEjVi9ieiUeu~iliUYD~HPDGymkAvBlxJlL4AGskt6YivIV3MhLIOCVtASOesrFDbv1R~cXFCcSnjKboAI2-W0okVlXLiWbQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
 
-export default Images;
+export const ImageItems = {
+  sideMenuMusic,
+  mainPage1Image:mainPage1Image,
+  mainPage2Image:mainPage2Image,
+  mainPage3Image:mainPage3Image
+};
+
 

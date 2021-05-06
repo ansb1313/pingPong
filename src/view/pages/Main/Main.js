@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import MainContainer from '../../container/Main/MainContainer';
 
-const Main = () => {
+const Main = (props) => {
 
     return(
 
         <Container>
-            Main
+            <MainContainer/>
         </Container>
 
     )
