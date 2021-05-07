@@ -1,11 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const CreateHeader = () => {
-    
+const CompletedContainer = () => {
     return(
         <Container>
-            
         </Container>
     )
 }
@@ -14,4 +12,4 @@ const Container = styled.div`
 
 `
 
-export default CreateHeader
+export default CompletedContainer

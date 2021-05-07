@@ -14,7 +14,7 @@ const Header = () => {
         <Home to={'/'}  activeClassName={'isActive'} exact={true}>{HomeIcon()}</Home>
       </HeaderEffectTemplate>
       <HeaderEffectTemplate>
-      <Create to={'/'} activeClassName={'isActive'} exact={true}>{CreateButton()}</Create>
+      <Create to={'/create/workspace'} activeClassName={'isActive'} exact={true}>{CreateButton()}</Create>
       </HeaderEffectTemplate>
       <HeaderEffectTemplate>
       <Explore to={'/'} activeClassName={'isActive'} exact={true}>{ExploreButton()}</Explore>
@@ -36,6 +36,7 @@ const Header = () => {
 };
 
 const Container = styled.div`
+  z-index: 2500;
   box-sizing: border-box;
   padding-top: 32px;
   padding-bottom: 36px;

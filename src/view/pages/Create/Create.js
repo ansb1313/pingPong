@@ -1,20 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import WorkspaceMainItemList from './WorkspaceMainItemList'
+import CreateContainer from '../../container/Create/CreateContainer'
 
-const WorkspaceMain = () => {
+const Create = (props) => {
     
     return(
         <Container>
-            <WorkspaceMainItemList/>
+            <CreateContainer {...props} />
         </Container>
     )
 }
 
 const Container = styled.div`
-    width: 100%;
+    height:100vh;
     overflow: hidden;
 `
-
-
-export default WorkspaceMain
+export default Create

@@ -1,0 +1,7 @@
+
+const image1 = "https://s3-alpha-sig.figma.com/img/fa52/ae5d/f779a29931a4396d710c7ac213d67373?Expires=1621209600&Signature=HaNRaHcgK2JQKK6Iq7rVNalZrPIb3B1bZs1TJo0VjkPs8P-jkHXYCf6Y-MmcAOOWW9As65bbWXskaqZE7Agkgu6JQRIn4I8EkR59XWOfaD17lHNzAPSsnmzKoQynd9ej0q7LW90P1GXZn9pm3uMrk-STIVfxURQNNtqErbOccqi377d7V5IkjP~DDRTt4iyUsHNTAX8rhLKOcBK0JeMnH9Er8wYSBXl30SY1JEdebS~tfFkA9QeucAF1lbCWshVxJRbFfu0K~51GT10ofIZS6JZDR387yqlcLSlrMPolUPIMW7fq8fWJ7w~tPAgZ5ggWZctAJyQmayIATZ9oRz2KwA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+const image2 = "https://s3-alpha-sig.figma.com/img/d7d0/ca80/fbc4f458f3e6130b93add3f43360647d?Expires=1621209600&Signature=cSQL-m-dZgy30zbjcHIWyvIzPlVkmZBLNx~P6Zt71nCwzo8BZha~aiC3cytDRaxA0P7baopjJX9pMd9nHHj~jXqDy-RHxyFinGaHHPXJA~Da~~W841N-2q8J5xGtM1T7pygfO0nkqHmQ8WVKFLVP39FsIb9L-cC35WOgP2Kl127WhU1XMfKXmKghG71OeNfJAFwBXcmr1zI3ZS-co7dsYih97QNrufVRsRVsyJ0u78BcCYeRs9ytMId3reKcntDfUk7FrcT9W67eDJjWi3NrOcNVacapnsIVGsQXiPXbCszfa0kLWminoAjWazoSPF~0NeIT~xprrFhAGOfdrhbqkQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+
+export const CompeletedItemImages = [
+    image1,image2
+]

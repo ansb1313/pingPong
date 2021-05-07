@@ -10,7 +10,6 @@ const MainContainer = (props) => {
 
     const onWheelTop = debounce((e, endPoint)=>{
         if(e.deltaY < 0){
-            
             if(virticalValue > endPoint) setVirticalValue((v) => v - 100)
             if(virticalValue <= endPoint) setVirticalValue(endPoint)
         }
