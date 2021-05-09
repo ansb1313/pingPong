@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {mainPage1Image} from "../../../../images/Images";
+import SectionBottomItems from "./SectionBottomItems";
 
 const SectionPage1 = () => {
   return (
@@ -24,6 +25,7 @@ const SectionPage1 = () => {
               </div>
           </div>  
       </TextArea>
+
     </Container>
   );
 };
