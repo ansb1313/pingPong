@@ -14,7 +14,7 @@ const WorkspaceMainItem = ({data}) => {
                   <img src={data.background} alt="" />
                   <div className={cn("filter",{isActive:filter})} />
               </ImageBox>  
-              <TextArea>
+              <TextArea className={cn({isActive:filter})}>
                   <h1 className="title">{data.title}</h1>
                   <span className="type">{data.type}</span>
                   <p className="desc">{data.desc}</p>
@@ -58,7 +58,7 @@ const ImageBox = styled.div`
         opacity: 0.45;
         transition: all 0.3s;
         &.isActive{
-            background: #fff;
+            background: rgba(255, 255, 255, 0.479);
         }
     }
     img{
@@ -68,9 +68,10 @@ const ImageBox = styled.div`
     }
 `
 const TextArea = styled.div`
+    color:#fff;
     position: relative;
     h1{
-        color: #fff;
+        
         opacity: 0.9;
         font-size: 21px;
         font-weight: bold;
@@ -79,8 +80,10 @@ const TextArea = styled.div`
     svg{
         margin-right: 5px;
     }
+    &.isActive{
+    }
     .type{
-        color: #fff;
+        
         opacity: 0.45;
         font-size: 9px;
         margin-bottom: 20px;
@@ -89,19 +92,19 @@ const TextArea = styled.div`
         margin-top: 15px;
         font-size: 9px;
         opacity: 0.8;
-        color: #fff;
+        
         margin-bottom: 15px;
         line-height: 1.8;
     }
     .info{
         font-size: 9px;
-        color:#fff;
+        
         opacity: 0.8;
         margin-bottom: 7px;
     }
     .location{
         font-size: 9px;
-        color:#fff;
+        
         opacity: 0.8;
     }
     .locationAndInfo{

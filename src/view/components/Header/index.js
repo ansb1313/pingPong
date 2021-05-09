@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink,} from "react-router-dom";
 import {CreateButton, ExploreButton, HomeIcon, MainLogo, UserIcon} from "../../../icons/Main/MainIcon";
 import HeaderEffectTemplate from "./HeaderEffectTemplate";
+import { signWithGoogle } from "../../../constants/firebase_config";
 
 const Header = () => {
 
@@ -21,11 +22,11 @@ const Header = () => {
       </HeaderEffectTemplate>
       </MenuItem>
       <Login>
-        <LoginUserIcon>
+        <LoginUserIcon onClick={signWithGoogle}>
             {UserIcon()}
             <div className="ellpse"></div>
         </LoginUserIcon>
-        <LoginButton>
+        <LoginButton onClick={signWithGoogle}>
           <span>
               Log in
           </span>

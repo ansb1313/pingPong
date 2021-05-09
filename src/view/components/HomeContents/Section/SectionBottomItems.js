@@ -1,46 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import cn from 'classnames'
 import styled from 'styled-components'
-import Header from '../Header'
-import { FaceBookIcon, InstagramIcon } from '../../../icons/Main/MainIcon'
-import SectionBottomItems from './Section/SectionBottomItems'
 
-const HomeTemplate = (props) => {
-    
+const SectionBottomItems = ({verticalValue ,risingItemLocation}) => {
+
     return(
-        <Container >
-            <Header/>
-            <SnsIcon>
-                <div className="facebook">
-                    {FaceBookIcon()}
-                </div>
-                <div className="instagram">
-                    {InstagramIcon()}
-                </div>
-            </SnsIcon>
+        <Container>
+             <RisingItems className={cn('risingItems',{risingEffect:risingItemLocation})}>
+                <DragIcon className={cn({isActive:verticalValue === 200})}>
+                    <div className="ellipse"></div>
+                </DragIcon>
+                <NoticeMenu className={cn({isActive:verticalValue === 200})}>
+                    <ul>
+                        <li><a href="#!">이용약관</a></li>
+                        <li><a href="#!">개인정보처리방침</a></li>
+                        <li><a href="#!">문의하기</a></li>
+                    </ul>
+                    <p>03150 서울시 종로구 삼봉로 81 두산위브파빌리온 826호 / 556-81-01006 / 서승원(Edward seo) / pp@pingpong.house / 02-6953-7758</p>
+                </NoticeMenu>
+            </RisingItems>
         </Container>
     )
 }
 
 const Container = styled.div`
-    position:fixed;
-    z-index: 2200;
-`
-const SnsIcon = styled.div`
-    position: fixed;
-    right:50px;
-    top:30px;
-    display: flex;
-    .instagram{
-        margin-left: 28px;
-    }
+
 `
 const RisingItems = styled.div`
     position: fixed;
     width: 100%;
     bottom: 0;
-    transition: all 0.4s;
+    transition: all 0.3s;
 
-    transform: translateY(100px);
+    transform: translateY(120px);
     opacity: 0;
     
     &.risingEffect{
@@ -128,6 +120,4 @@ const NoticeMenu = styled.div`
    }
 `
 
-
-
-export default HomeTemplate
+export default SectionBottomItems
