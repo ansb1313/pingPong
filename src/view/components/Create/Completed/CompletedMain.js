@@ -1,27 +1,53 @@
-import React from 'react'
-import styled from 'styled-components'
-import CompletedMainItemList from './CompletedMainItemList'
-import CompletedWaitItemList from './CompletedWaitItemList'
+import React from "react";
+import styled from "styled-components";
+import { completedTextData } from '../../../../testData/TestData'
+import CompletedMainItemList from "./CompletedMainItemList";
 
-const CompletedMain = (props) => {
-    
-    return(
-        <Container>
-           <MainItem>
-            <CompletedMainItemList/>
-           </MainItem>
-           <CompletedWaitItemList/>
-        </Container>
-    )
-}
+const CompletedMain = () => {
+  return (
+    <Container>
+      <CompletedMainItemList />
+      <PageNation>
+        <div className="items">
+          <div className="startNum">
+            <span>01</span>
+          </div>
+          <div className="duration"></div>
+          <div className="endNum">
+            <span>{completedTextData.items.length}</span>
+          </div>
+        </div>
+      </PageNation>
+    </Container>
+  );
+};
 
 const Container = styled.div`
-`
-const MainItem = styled.div`
-        display: flex;
-    h1{
-        color:#fff;
-    }
-`
+  width: 100%;
+  overflow: hidden;
+`;
+const PageNation = styled.div`
+  box-sizing: border-box;
+  padding: 0 62px;
 
-export default CompletedMain
+  .items {
+    display: flex;
+    align-items: center;
+    div {
+      margin-right: 7px;
+    }
+    span {
+      color: #fff;
+      font-size: 11px;
+      display: block;
+    }
+  }
+  .duration {
+    height: 2px;
+    width: 120px;
+    background: #fff;
+    opacity: 0.45;
+  }
+`;
+
+export default CompletedMain;

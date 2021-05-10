@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CompletedWaitItem = ({data}) => {
+const WorkspaceWaitItem = ({data}) => {
   return (
     <Container>
       <Title>
@@ -71,4 +71,4 @@ const Option = styled.div`
   align-items: center;
 `;
 
-export default CompletedWaitItem;
+export default WorkspaceWaitItem;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const WorkspaceHeader = () => {
+const CompletedHeader = () => {
     
     return(
         <Container>
@@ -14,4 +14,4 @@ const Container = styled.div`
 
 `
 
-export default WorkspaceHeader
+export default CompletedHeader

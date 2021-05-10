@@ -1,4 +1,4 @@
-export const workspaceTextData = {
+export const completedTextData = {
     items:[
         {
             title:"숨겨진 다락방",
@@ -44,7 +44,7 @@ export const workspaceTextData = {
     ]
 }
 
-export const CompletedTestData = {
+export const workspaceTestData = {
     items:[
         {   
             title:'우주 보물을 찾아서',
@@ -81,7 +81,7 @@ export const CompletedTestData = {
     ]
 }
 
-export const CompletedWaitItemData = {
+export const workspaceWaitItemData = {
     items:[
         {
             title:"수상한 컨테이너의 점술사",
@@ -97,5 +97,45 @@ export const CompletedWaitItemData = {
             publishedAt:"2020.02.03",
             option:'수정하기'           
         }
+    ]
+}
+
+export const deletePageData = {
+    items:[
+        {
+            title:"수상한 컨테이너의 점술사",
+            category:"방탈출・미스테리/추리",
+            status:"승인 완료",
+            publishedAt:"2020.02.03",
+            option:'복구'           
+        },
+        {
+            title:"호텔 델루나",
+            category:"심리테스트・미스테리/추리",
+            status:"반려",
+            publishedAt:"2020.02.03",
+            option:'복구'             
+        },
+        {
+            title:"우주 보물을 찾아라",
+            category:"보물찾기・SF",
+            status:"제작 중",
+            publishedAt:"2020.02.03",
+            option:'복구'            
+        },
+        {
+            title:"박물관이 살아있다",
+            category:"방탈출・미스테리/추리",
+            status:"제작 중",
+            publishedAt:"2020.02.03",
+            option:'복구'            
+        },
+        {
+            title:"숲 속의 외딴집",
+            category:"방탈출・공포",
+            status:"승인 완료",
+            publishedAt:"2020.02.03",
+            option:'대기 취소'           
+        },
     ]
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import DeleteItemList from './DeleteItemList'
 
 const DeleteMain = () => {
     
     return(
         <Container>
-            DeleteMain
+            <DeleteItemList />
         </Container>
     )
 }

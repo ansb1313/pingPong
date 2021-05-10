@@ -1,63 +1,64 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import { PlusIcon } from "../../../../icons/Main/CreateWorkspaceIcon";
-import {CompletedTestData} from "../../../../testData/TestData";
+import {images} from "../../../../images/WorkspaceImages";
 import CompletedMainItem from "./CompletedMainItem";
+import {completedTextData} from "./../../../../testData/TestData";
+import {debounce} from "lodash";
 
 const CompletedMainItemList = () => {
+  const [hlValue, setHlValue] = useState(0);
+  const onWheelTop = debounce((e, endPoint) => {
+    if (e.deltaY < 0) {
+      if (hlValue > endPoint) setHlValue((v) => v - 20);
+      if (hlValue <= endPoint) setHlValue(endPoint);
+    }
+  });
+  console.log("hlValue", hlValue);
+  const onWheelBottom = debounce((e, endPoint) => {
+    if (e.deltaY > 0) {
+      if (hlValue < endPoint) setHlValue((v) => v + 20);
+      if (hlValue > endPoint) setHlValue(endPoint);
+    }
+  });
+  const imageItmes = Object.keys(images).map((item) => {
+    return images[item];
+  });
+  const data = completedTextData.items.map((item, i) => {
+    item.background = imageItmes[i];
+    return item;
+  });
+
   return (
-    <Container>
-      <ItemAdd>
-        <span>Create</span>
-        <div className={"createButton"}>{PlusIcon()}</div>
-      </ItemAdd>
-      <ItemList>
-        {CompletedTestData.items.map((item, i) => {
-          return <CompletedMainItem key={i} data={item} />;
-        })}
-      </ItemList>
+    <Container
+      onWheel={(e) => {
+        onWheelTop(e, 0);
+        onWheelBottom(e, 30);
+      }}
+      hlValue={`-${hlValue}%`}
+    >
+      <MainContents>
+        <ItemList>
+          {data.map((item, i) => {
+            return <CompletedMainItem data={item} key={i} />;
+          })}
+        </ItemList>
+      </MainContents>
     </Container>
   );
 };
 
 const Container = styled.div`
-  margin-bottom: 58px;
-  .submitCount {
-    font-size: 13px;
-    color: #4f80ff;
-  }
+  transition: all 0.3s;
+  transform: translateX(${(props) => props.hlValue});
+  padding-left: 102px;
+`;
+const MainContents = styled.div`
   display: flex;
-  align-items: center;
 `;
 const ItemList = styled.div`
   display: flex;
+  margin-bottom: 38px;
 `;
 
-const ItemAdd = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-right: 22px;
-
-  span {
-    line-height: 13px;
-    font-size: 11px;
-    color: #4f80ff;
-    cursor: pointer;
-  }
-  .createButton {
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #4f80ff;
-    width: 42px;
-    height: 42px;
-  }
-`;
 
 export default CompletedMainItemList;

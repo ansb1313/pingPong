@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CompletedWaitItemData } from '../../../../testData/TestData'
-import CompletedWaitItem from './CompletedWaitItem'
+import { workspaceWaitItemData } from '../../../../testData/TestData'
+import WorkspaceWaitItem from './WorkspaceWaitItem'
 
-const CompletedWaitItemList = () => {
+const WorkspaceWaitItemList = () => {
     
     return(
         <Container>
@@ -34,8 +34,8 @@ const CompletedWaitItemList = () => {
             </Part>     
             <Items>
             {
-                CompletedWaitItemData.items.map((item, i)=>(
-                    <CompletedWaitItem key={i} data={item} />
+                workspaceWaitItemData.items.map((item, i)=>(
+                    <WorkspaceWaitItem key={i} data={item} />
                 ))
             }
             </Items>
@@ -83,4 +83,4 @@ const Part = styled.div`
 const Items = styled.div`
 
 `
-export default CompletedWaitItemList
+export default WorkspaceWaitItemList

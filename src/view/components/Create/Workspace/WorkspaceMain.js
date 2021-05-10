@@ -1,20 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 import WorkspaceMainItemList from './WorkspaceMainItemList'
+import WorkspaceWaitItemList from './WorkspaceWaitItemList'
 
-const WorkspaceMain = () => {
+const WorkspaceMain = (props) => {
     
     return(
         <Container>
+           <MainItem>
             <WorkspaceMainItemList/>
+           </MainItem>
+           <WorkspaceWaitItemList/>
         </Container>
     )
 }
 
 const Container = styled.div`
-    width: 100%;
-    overflow: hidden;
 `
-
+const MainItem = styled.div`
+        display: flex;
+    h1{
+        color:#fff;
+    }
+`
 
 export default WorkspaceMain
