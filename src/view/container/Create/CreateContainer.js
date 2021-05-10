@@ -45,6 +45,7 @@ const CreateContainer = (props) => {
           <p>{desc()}</p>
         </Title>
         <Create {...props} />
+
       </CreateContents>
     </Container>
   );
@@ -54,14 +55,13 @@ const Container = styled.div`
   background: #171717;
 `;
 const CreateContents = styled.div`
-  padding-left: 72px;
+  margin-left: 72px;
   box-sizing: border-box;
-  padding-top: 16px;
-  padding-left: 122px;
 `;
 const Title = styled.div`
   color: #fff;
   margin-bottom: 55px;
+  padding: 0 0 0 50px;
   h1 {
     text-transform: capitalize;
     font-size: 27px;
@@ -76,7 +76,7 @@ const Title = styled.div`
 const CreateMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 47px;
+
     a{
         color:#71777C;
         text-transform: capitalize;
@@ -100,7 +100,7 @@ const CreatePageSearchBox = styled.div`
     height: 35px;
     border-radius: 20px;
     background: #37383A;
-    margin-right: 50px;
+
     input{
         width: 80%;
         background: #37383A;
@@ -114,6 +114,7 @@ const CreatePageSearchBox = styled.div`
 const TopContents = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 20px 50px;
 `
 
 export default CreateContainer;

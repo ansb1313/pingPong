@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CreateContainer from '../../container/Create/CreateContainer'
 
+
 const Create = (props) => {
     
     return(

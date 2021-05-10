@@ -53,7 +53,7 @@ const MainContainer = (props) => {
     </Container>
   );
 };
-
+//ss
 const Container = styled.div`
   background: #999;
   overflow-x: hidden;
