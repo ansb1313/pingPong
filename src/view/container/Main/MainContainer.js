@@ -31,7 +31,7 @@ const MainContainer = (props) => {
 
   const [risingItemLocation, setRisingItemLocation] = useState(false);
 
-  const onWheelRigingEffect = (event) => {
+  const onWheelRisingEffect = (event) => {
     //    const targetEl = event.currentTarget;
     //    console.log('targetEl', targetEl)
     setRisingItemLocation(false);
@@ -54,7 +54,7 @@ const MainContainer = (props) => {
       
     >
       <HomeTemplate verticalValue={verticalValue} />
-      <SectionWarp transformValue={`-${verticalValue}vh`} onWheel={(e)=>{onWheelRigingEffect(e);}}>
+      <SectionWarp transformValue={`-${verticalValue}vh`} onWheel={(e)=>{onWheelRisingEffect(e);}}>
         <HomeContents/>
       </SectionWarp>
       <SectionBottomItems risingItemLocation={risingItemLocation}
