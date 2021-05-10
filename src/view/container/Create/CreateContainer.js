@@ -10,15 +10,16 @@ const CreateContainer = (props) => {
 
   const desc = () => {
     if (id == "workspace") {
-      return "최근 작업한 XR 콘텐츠 목록입니다. 제작 완료한 콘텐츠를 다른 사람과 함께 즐기고 싶다면,  ‘Export to APP’ 버튼을 눌러 승인을 받으세요.";
+      return "승인된 콘텐츠 내역입니다. 콘텐츠를 활성화하면 앱에서 플레이가 가능합니다.";
     } else if (id == "completed") {
       return "승인된 콘텐츠를 활성화하면 앱에서 플레이가 가능합니다. 대기/반려된 콘텐츠는 목록에서 제거할 경우 Workspace로 이동합니다.";
     } else if (id == "deleted") {
-      return "최근 1년 이내에 삭제한 콘텐츠 목록입니다. 삭제된 지 1년이 지난 콘텐츠는 자동으로 목록에서 사라지며, 이후 복구가 불가능합니다.  승인이 완료된 콘텐츠를 삭제할 경우, 복구하더라도 재승인이 필요합니다.";
+      return "최근 1년 이내에 삭제한 콘텐츠 목록입니다. 삭제된 지 1년이 지난 콘텐츠는 자동으로 목록에서 사라지며, 이후 복구가 불가능합니다. <br/> 승인이 완료된 콘텐츠를 삭제할 경우, 복구하더라도 재승인이 필요합니다.";
     }
   };
 
-//   CreateSearchIcon
+  const descVal = desc() 
+
   return (
     <Container>
       <Header />
@@ -28,8 +29,8 @@ const CreateContainer = (props) => {
             <div className="workspace">
             <NavLink to={'/create/workspace'} activeClassName={'isActive'} >workspace</NavLink>
             </div>
-            <div className="completed">
-            <NavLink to={'/create/completed'} activeClassName={'isActive'} >completed</NavLink>
+            <div className="Completed">
+            <NavLink to={'/create/completed'} activeClassName={'isActive'} >Completed</NavLink>
             </div>
             <div className="deleted">
             <NavLink to={'/create/deleted'} activeClassName={'isActive'} >deleted</NavLink>
@@ -42,7 +43,7 @@ const CreateContainer = (props) => {
         </TopContents>
         <Title>
           <h1>{id}</h1>
-          <p>{desc()}</p>
+          <p dangerouslySetInnerHTML={{__html:descVal}}></p>
         </Title>
         <Create {...props} />
       </CreateContents>
@@ -54,7 +55,6 @@ const Container = styled.div`
   background: #171717;
 `;
 const CreateContents = styled.div`
-  padding-left: 72px;
   box-sizing: border-box;
   padding-top: 16px;
   padding-left: 122px;
@@ -71,6 +71,8 @@ const Title = styled.div`
   p {
     font-size: 11px;
     opacity: 0.7;
+    color:#9EA6AD;
+    line-height: 19px;
   }
 `;
 const CreateMenu = styled.div`

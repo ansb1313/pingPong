@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import cn from 'classnames';
 import styled from 'styled-components'
 
-const CompletedButtonEffect = ({children}) => {
+const WorkspaceButtonEffect = ({children}) => {
 
     const [button, setButton] = useState(false);
 
@@ -44,4 +44,4 @@ height: 100%;
     }
 `
 
-export default CompletedButtonEffect
+export default WorkspaceButtonEffect

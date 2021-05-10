@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { deletePageData } from '../../../../testData/TestData'
-import DeleteItem from './DeleteItem'
+import { workspaceWaitItemData } from '../../../../testData/TestData'
+import WorkspaceWaitItem from './WorkspaceWaitItem'
 
-const DeleteItemList = () => {
+const WorkspaceWaitItemList = () => {
+    
     return(
         <Container>
-                <Part>
+            <Title>
+                <h1>승인 대기중인 콘텐츠</h1>
+            </Title>
+            <Part>
                 <div className="itemTitle">
                     <span>
                     콘텐츠 이름
@@ -28,17 +32,25 @@ const DeleteItemList = () => {
                     </span>
                 </div>
             </Part>     
+            <Items>
             {
-                deletePageData.items.map((item, i) => (
-                    <DeleteItem key={i} data={item}/>
+                workspaceWaitItemData.items.map((item, i)=>(
+                    <WorkspaceWaitItem key={i} data={item} />
                 ))
-            }        
+            }
+            </Items>
         </Container>
     )
 }
 
 const Container = styled.div`
-
+`
+const Title = styled.div`
+    margin-bottom: 20px;
+    h1{
+        color:#fff;
+        size: 17px;
+    }
 `
 const Part = styled.div`
     width: 91.5%;
@@ -68,5 +80,7 @@ const Part = styled.div`
         width: 20%;
     }
 `
+const Items = styled.div`
 
-export default DeleteItemList
+`
+export default WorkspaceWaitItemList

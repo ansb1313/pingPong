@@ -2,9 +2,9 @@ import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 import styled from 'styled-components'
 import CreateHeader from './CreateHeader'
-import WorkspaceMain from './Workspace/WorkspaceMain'
+import CompletedMain from './Completed/CompletedMain'
 import DeleteMain from './Delete/DeleteMain'
-import ComplatedMain from './Completed/ComplatedMain'
+import WorkspaceMain from './Workspace/WorkspaceMain'
 
 const Create = (props) => {
     return(
@@ -12,7 +12,7 @@ const Create = (props) => {
             <CreateHeader/>
             <Switch>
                 <Route path={'/create/workspace'} exact={true} component={WorkspaceMain} />
-                <Route path={'/create/completed'} component={ComplatedMain} />
+                <Route path={'/create/completed'} component={CompletedMain} />
                 <Route path={'/create/Deleted'} component={DeleteMain} />
             </Switch>
         </Container>

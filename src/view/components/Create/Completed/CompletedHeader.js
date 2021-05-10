@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ComplatedWaitItemList = () => {
+const CompletedHeader = () => {
     
     return(
         <Container>
-            ComplatedWaitItemList
+              WorkspaceHeader
         </Container>
     )
 }
@@ -14,4 +14,4 @@ const Container = styled.div`
 
 `
 
-export default ComplatedWaitItemList
+export default CompletedHeader
