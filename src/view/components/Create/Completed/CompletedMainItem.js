@@ -10,7 +10,7 @@ const CompletedMainItem = ({data}) => {
 
     return(
         <Container onMouseEnter={()=>{setFliter(true)}} onMouseLeave={()=>{setFliter(false)}}>
-            <CompletedItem>
+            <CompletedItem className={cn({boxShadow:filter})}>
               <ImageBox>
               <ArrowIcon>
               {deleteItemArrow()}
@@ -45,6 +45,7 @@ const CompletedMainItem = ({data}) => {
 }
 
 const Container = styled.div`
+    margin-top: 2px;
 `
 const CompletedItem = styled.div`
     overflow: hidden;
@@ -61,6 +62,9 @@ const CompletedItem = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
+    &.boxShadow{
+        box-shadow: 0 0 0.3em 0.02em rgba(55, 122, 255, 1);
+    }
 `
 const ImageBox = styled.div`
     position: absolute;
@@ -82,7 +86,8 @@ const ImageBox = styled.div`
         opacity: 0.45;
         transition: all 0.3s;
         &.isActive{
-            background: rgba(255, 255, 255, 0.479);
+            background: #1F1F20;
+            opacity: 0.45;
         }
     }
     img{

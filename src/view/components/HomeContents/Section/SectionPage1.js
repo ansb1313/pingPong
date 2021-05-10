@@ -56,10 +56,12 @@ const TextArea = styled.div`
     flex-direction: column;
     padding-top: 218px;
     color: #f7f4f4;
+    
     h1{
         font-size: 48px;
         font-weight: 700;
         margin-bottom: 20px;
+        
     }
     p{
         line-height: 31px;
@@ -72,6 +74,7 @@ const TextArea = styled.div`
         justify-content: center;
         align-items: center;
         .button{
+        
         width: 240px;
         height: 54px;
         display: flex;
