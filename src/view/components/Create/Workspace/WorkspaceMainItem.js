@@ -23,7 +23,12 @@ const WorkspaceMainItem = ({data}) => {
                     <span className="location">{locationIcon()}{data.location}</span>
                   </div>
               </TextArea>
-            </WorkSpaceItem>      
+            </WorkSpaceItem>   
+            <ApprovedAt>
+                <span>
+                    {data.approvedAt}
+                </span>
+            </ApprovedAt>
         </Container>
     )
 }
@@ -41,6 +46,7 @@ const WorkSpaceItem = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 8px;
 `
 const ImageBox = styled.div`
     position: absolute;
@@ -92,7 +98,6 @@ const TextArea = styled.div`
         margin-top: 15px;
         font-size: 9px;
         opacity: 0.8;
-        
         margin-bottom: 15px;
         line-height: 1.8;
     }
@@ -104,12 +109,17 @@ const TextArea = styled.div`
     }
     .location{
         font-size: 9px;
-        
         opacity: 0.8;
     }
     .locationAndInfo{
         display: flex;
         flex-direction: column;
+    }
+`
+const ApprovedAt = styled.div`
+    span{
+        color:#71777C;
+        font-size: 9px;
     }
 `
 

@@ -11,7 +11,7 @@ const CreateContainer = (props) => {
   const desc = () => {
     if (id == "workspace") {
       return "최근 작업한 XR 콘텐츠 목록입니다. 제작 완료한 콘텐츠를 다른 사람과 함께 즐기고 싶다면,  ‘Export to APP’ 버튼을 눌러 승인을 받으세요.";
-    } else if (id == "completed") {
+    } else if (id == "Completed") {
       return "승인된 콘텐츠를 활성화하면 앱에서 플레이가 가능합니다. 대기/반려된 콘텐츠는 목록에서 제거할 경우 Workspace로 이동합니다.";
     } else if (id == "deleted") {
       return "최근 1년 이내에 삭제한 콘텐츠 목록입니다. 삭제된 지 1년이 지난 콘텐츠는 자동으로 목록에서 사라지며, 이후 복구가 불가능합니다.  승인이 완료된 콘텐츠를 삭제할 경우, 복구하더라도 재승인이 필요합니다.";
@@ -28,8 +28,8 @@ const CreateContainer = (props) => {
             <div className="workspace">
             <NavLink to={'/create/workspace'} activeClassName={'isActive'} >workspace</NavLink>
             </div>
-            <div className="completed">
-            <NavLink to={'/create/completed'} activeClassName={'isActive'} >completed</NavLink>
+            <div className="Completed">
+            <NavLink to={'/create/Completed'} activeClassName={'isActive'} >Completed</NavLink>
             </div>
             <div className="deleted">
             <NavLink to={'/create/deleted'} activeClassName={'isActive'} >deleted</NavLink>

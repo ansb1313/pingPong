@@ -9,6 +9,10 @@ import { useEffect } from "react";
 const MainContainer = (props) => {
   const [verticalValue, setverticalValue] = useState(0);
 
+  useEffect(()=>{
+    setRisingItemLocation(true);
+  },[])
+  
   const onWheelTop = _.throttle((e, endPoint) => {
     if (e.deltaY < 0) {
       if (verticalValue > endPoint) setverticalValue((v) => v - 100);
@@ -36,16 +40,22 @@ const MainContainer = (props) => {
     },900);
   };
 
+  const onDrag = () => {
+      console.log('drag')
+  }
+
   return (
     <Container
       onWheel={_.throttle((e) => {
         onWheelTop(e, 0);
         onWheelBottom(e, 200);
       },500)}
+      onDragStart={onDrag}
+      
     >
       <HomeTemplate verticalValue={verticalValue} />
       <SectionWarp transformValue={`-${verticalValue}vh`} onWheel={(e)=>{onWheelRigingEffect(e);}}>
-        <HomeContents />
+        <HomeContents/>
       </SectionWarp>
       <SectionBottomItems risingItemLocation={risingItemLocation}
                           verticalValue={verticalValue}
