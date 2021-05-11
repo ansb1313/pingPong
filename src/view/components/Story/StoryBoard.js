@@ -6,7 +6,7 @@ const StoryBoard = () => {
         <Container>
             StoryBoard
             <ControllTool></ControllTool>
-                <EditTool></EditTool>
+            <EditTool></EditTool>
         </Container>
     )
 }
@@ -15,9 +15,9 @@ const Container = styled.div`
     width: 100%;
     padding-right: 306px;
     box-sizing: border-box;
+    position: relative;
 `
 const ControllTool = styled.div`
-    position: fixed;
     width: 100px;
     height: 41px;
     border-radius: 16px;
@@ -26,16 +26,13 @@ const ControllTool = styled.div`
     top: 23px;
 ;
 `
-
 const EditTool = styled.div`
     width: 262px;
     height: 41px;
-    position:fixed;
     border-radius: 16px;
     background: #37383A;
     right: 30px;
     top: 23px;
 `
-
 
 export default StoryBoard
