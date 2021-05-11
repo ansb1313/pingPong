@@ -15,8 +15,8 @@ const StoryContainer = (props) => {
 
 const Container = styled.div`
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     padding-top: 107px;
     padding-right: 306px;
